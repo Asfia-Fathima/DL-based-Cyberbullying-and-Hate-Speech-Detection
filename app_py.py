@@ -1,7 +1,3 @@
-
-!pip install torch transformers streamlit pandas matplotlib seaborn scikit-learn pyngrok
-
-# app.py
 import streamlit as st
 import pandas as pd
 import numpy as np
