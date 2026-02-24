@@ -141,10 +141,4 @@ st.markdown("""
 - This system contributes toward safer online communities by providing automated monitoring of harmful content.
 """)
 
-!pip install torch transformers streamlit seaborn matplotlib
-!streamlit run app.py
-
-from pyngrok import ngrok
-public_url = ngrok.connect(port=8501)
-print("Your Streamlit dashboard URL:", public_url)
 
