@@ -95,10 +95,10 @@ if analyze_btn and user_input:
     probs = predict(user_input)
     is_toxic = any(p > 0.5 for p in probs)
         
-        if is_toxic:
-            st.error(" **High Toxicity Detected:** This content may violate safety guidelines.")
-        else:
-            st.success("**Safe Content:** No significant toxicity detected.")
+    if is_toxic:
+        st.error(" **High Toxicity Detected:** This content may violate safety guidelines.")
+    else:
+        st.success("**Safe Content:** No significant toxicity detected.")
 
     custom_colors = ["#b91c1c", "#8b0000", "#15803d", "#65a30d", "#1d4ed8", "#4338ca"]
     
