@@ -69,7 +69,7 @@ with st.sidebar:
 
 # --- 5. Main Checker Page ---
 if selected == "Main Checker":
-    st.title("Cyberbullying & Hate Speech Detection with Legal Awareness")
+    st.title("🚫 Cyberbullying & Hate Speech Detection with Legal Awareness")
     
     # Input Section
     # st.markdown('<div class="main-card">', unsafe_allow_html=True)
