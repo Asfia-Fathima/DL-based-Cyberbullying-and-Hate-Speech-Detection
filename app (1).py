@@ -54,7 +54,7 @@ def predict(text):
 
 # --- 4. Sidebar Navigation ---
 with st.sidebar:
-    st.markdown("<h1 style='text-align: center;'>Model</h1>", unsafe_allow_html=True)
+    st.markdown("<h1 style='text-align: center;'>🚫 Cyberbullying & Hate Speech Detection</h1>", unsafe_allow_html=True)
     selected = option_menu(
         menu_title=None,
         options=["Main Checker", "Dataset Insights"],
@@ -72,7 +72,7 @@ if selected == "Main Checker":
     st.title("Cyberbullying & Hate Speech Detection with Legal Awareness")
     
     # Input Section
-    st.markdown('<div class="main-card">', unsafe_allow_html=True)
+    # st.markdown('<div class="main-card">', unsafe_allow_html=True)
     st.subheader("Input Content")
     st.write("Enter text or select any suggestion and analyze the toxicity levels.")
     
@@ -86,7 +86,7 @@ if selected == "Main Checker":
     st.markdown('</div>', unsafe_allow_html=True)
 
     if analyze_btn and user_input:
-        st.markdown('<div class="main-card">', unsafe_allow_html=True)
+       # st.markdown('<div class="main-card">', unsafe_allow_html=True)
         st.subheader("Analysis Breakdown")
         
         probs = predict(user_input)
@@ -105,7 +105,7 @@ if selected == "Main Checker":
         st.markdown('</div>', unsafe_allow_html=True)
 
     # Legal Section
-    st.markdown('<div class="main-card">', unsafe_allow_html=True)
+    # st.markdown('<div class="main-card">', unsafe_allow_html=True)
     st.subheader("Indian Legal Framework & Punishments")
     laws = [
         ("Section 66E (IT Act)", "Violation of privacy.", "Up to 3 years imprisonment or 2 lakh fine."),
@@ -123,7 +123,7 @@ elif selected == "Dataset Insights":
     st.markdown("The model is trained on the Jigsaw Toxic Comment Classification dataset, utilizing BERT for context-aware analysis.")
 
     # Section 1: Metrics Table/Row
-    st.markdown('<div class="main-card">', unsafe_allow_html=True)
+    # st.markdown('<div class="main-card">', unsafe_allow_html=True)
     st.subheader("Model Evaluation Metrics")
     st.write("Overview of the overall model performance across the testing set.")
     m1, m2, m3, m4 = st.columns(4)
@@ -134,7 +134,7 @@ elif selected == "Dataset Insights":
     st.markdown('</div>', unsafe_allow_html=True)
 
     # Section 2: Chart Breakdown
-    st.markdown('<div class="main-card">', unsafe_allow_html=True)
+    # st.markdown('<div class="main-card">', unsafe_allow_html=True)
     st.subheader("Per-label Precision, Recall, and F1 Score")
     st.write("This chart visualizes how the model performs on specific categories. Note the variance in F1 scores due to class imbalance.")
     
@@ -156,7 +156,7 @@ elif selected == "Dataset Insights":
     st.markdown('</div>', unsafe_allow_html=True)
 
     # Section 3: Distribution
-    st.markdown('<div class="main-card">', unsafe_allow_html=True)
+    # st.markdown('<div class="main-card">', unsafe_allow_html=True)
     st.subheader("Training Data Distribution")
     st.write("Number of positive predictions per label in the dataset sample.")
     count_data = pd.DataFrame({"Category": labels, "Count": [38, 0, 11, 1, 23, 1]})
@@ -166,7 +166,7 @@ elif selected == "Dataset Insights":
     st.markdown('</div>', unsafe_allow_html=True)
 
     # Section 4: Dataset Preview
-    st.markdown('<div class="main-card">', unsafe_allow_html=True)
+    # st.markdown('<div class="main-card">', unsafe_allow_html=True)
     st.subheader("Dataset Preview")
     st.write("A glimpse of the raw training data structure including sentiment polarity and comment length.")
     sample_df = pd.DataFrame([
@@ -178,7 +178,7 @@ elif selected == "Dataset Insights":
     st.markdown('</div>', unsafe_allow_html=True)
 
     # Section 5: Architecture Note
-    st.markdown('<div class="main-card">', unsafe_allow_html=True)
+    # st.markdown('<div class="main-card">', unsafe_allow_html=True)
     st.subheader("Architecture: BERT")
     st.write("This model uses Bidirectional Encoder Representations from Transformers to analyze word context rather than just isolated keywords.")
     st.markdown('</div>', unsafe_allow_html=True)
