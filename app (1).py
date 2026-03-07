@@ -88,9 +88,9 @@ if selected == "Main Checker":
     st.markdown('</div>', unsafe_allow_html=True)
 
   # --- SEGMENT 2: Analysis Results ---
-if analyze_btn and user_input:
-    st.markdown('<div class="main-card">', unsafe_allow_html=True)
-    st.subheader("Analysis Breakdown")
+    if analyze_btn and user_input:
+        st.markdown('<div class="main-card">', unsafe_allow_html=True)
+        st.subheader("Analysis Breakdown")
     
     probs = predict(user_input)
     is_toxic = any(p > 0.5 for p in probs)
@@ -108,7 +108,7 @@ if analyze_btn and user_input:
         fig.add_trace(go.Bar(
             y=[label], 
             x=[prob],
-            orientation='v',
+            orientation='h',
             # Using the custom color for each specific bar
             marker=dict(color=color),
             # Adding a text label to show the percentage on the bar
